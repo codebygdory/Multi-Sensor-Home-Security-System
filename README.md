@@ -2,7 +2,7 @@
 
 An advanced embedded security platform built on the ATmega328P architecture featuring runtime self-calibration, configurable sensitivity profiles, and noise-immune threshold filtering.
 
-## 📌 Technical Highlights
+## Technical Highlights
 Unlike standard threshold-based security systems, this platform implements advanced digital signal processing and state-management techniques at the firmware level to ensure maximum reliability and noise reduction.
 
 * **Automated Self-Calibration:** Upon boot, the system samples the ambient light environment via the photoresistor (LDR) to establish a baseline lux reference point, adapting automatically to different room lighting environments.
