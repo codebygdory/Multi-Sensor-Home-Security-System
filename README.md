@@ -22,6 +22,11 @@ Unlike standard threshold-based security systems, this platform implements advan
 
 ## Engineering Implementation Details
 
+* **Architected a real-time security firmware platform** on the ATmega328P architecture using modular C++, managing multi-sensor polling loops without using blocking functions.
+* **Mitigated environmental sensor noise** by implementing a dual-threshold hysteresis filtering loop, completely eliminating false alarms near trigger boundaries.
+* **Engineered an automated self-calibration routine** that dynamically samples ambient lux levels at boot to establish stable environmental baselines across changing light conditions.
+* **Developed a non-blocking telemetry system** utilizing `millis()` timestamp tracking to pulse a Morse code SOS alert sequence asynchronously while maintaining active background tracking loops.
+
 ### 1. Hysteresis Filtering Implementation
 To eliminate false alarms caused by sensor noise near the trigger boundary, the firmware utilizes a dual-threshold hysteresis loop. An alert is only tripped when a reading passes the high threshold, and cannot reset until the signal clears the lower safety boundary.
 
